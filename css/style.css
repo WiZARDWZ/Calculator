@@ -1,0 +1,276 @@
+@import url("./partial/navbar.css");
+@import url("./partial/content.css");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@800;900&family=League+Spartan:wght@700&family=Mukta:wght@300;600&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Cairo Play", cursive;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.attribution {
+  font-size: 13px !important;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  /* position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%); */
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 14px !important;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: hsl(268, 75%, 9%);
+  overflow: hidden;
+  z-index: -10;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 4s linear infinite;
+  z-index: 10;
+}
+
+.background li:nth-child(0) {
+  left: 35%;
+  width: 158px;
+  height: 198px;
+  bottom: -198px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 69%;
+  width: 156px;
+  height: 156px;
+  bottom: -156px;
+  animation-delay: 3s;
+}
+.background li:nth-child(2) {
+  left: 77%;
+  width: 192px;
+  height: 192px;
+  bottom: -192px;
+  animation-delay: 4s;
+}
+.background li:nth-child(3) {
+  left: 48%;
+  width: 111px;
+  height: 111px;
+  bottom: -111px;
+  animation-delay: 12s;
+}
+.background li:nth-child(4) {
+  left: 27%;
+  width: 189px;
+  height: 189px;
+  bottom: -189px;
+  animation-delay: 5s;
+}
+.background li:nth-child(5) {
+  left: 34%;
+  width: 143px;
+  height: 143px;
+  bottom: -143px;
+  animation-delay: 23s;
+}
+.background li:nth-child(6) {
+  left: 14%;
+  width: 180px;
+  height: 180px;
+  bottom: -180px;
+  animation-delay: 28s;
+}
+.background li:nth-child(7) {
+  left: 21%;
+  width: 147px;
+  height: 147px;
+  bottom: -147px;
+  animation-delay: 25s;
+}
+.background li:nth-child(8) {
+  left: 82%;
+  width: 183px;
+  height: 183px;
+  bottom: -183px;
+  animation-delay: 35s;
+}
+.background li:nth-child(9) {
+  left: 43%;
+  width: 151px;
+  height: 151px;
+  bottom: -151px;
+  animation-delay: 36s;
+}
+section {
+  position: absolute;
+  z-index: 40;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  /* background-color: whitesmoke; */
+}
+section > div.output {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+section > div.output > input {
+  width: 100%;
+  height: 85px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+  font-size: 28px;
+  padding: 15px;
+}
+.btn-wrapper {
+  background: hsl(268, 71%, 12%);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.btn-container {
+  margin-top: 15px;
+}
+.btn-container > input {
+  width: 75px;
+  height: 55px;
+  background-color: hsl(268, 47%, 21%) !important;
+  box-shadow: 0px 3px 0px hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+  border: none;
+  border-radius: 15px;
+}
+.calc-header > p {
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(52, 100%, 62%);
+  margin-bottom: -20px;
+}
+/* Start toggle btn */
+.toggle-btn {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(52, 100%, 62%);
+}
+.tri-state-toggle {
+  background: hsl(268, 47%, 21%);
+  box-shadow: inset 0 2px 8px 0 rgba(165, 170, 174, 0.048);
+  border-radius: 24px;
+  display: inline-block;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: row;
+  transition: all 500ms ease;
+}
+
+.tri-state-toggle-button {
+  border-radius: 22px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  background-color: transparent;
+  border: 0px solid transparent;
+  margin: 2px;
+  color: white;
+  cursor: pointer;
+
+  /*    -webkit-transition: all 0.5s ease-in-out;
+-moz-transition:    all 0.5s ease-in-out;
+-ms-transition:     all 0.5s ease-in-out;
+-o-transition:      all 0.5s ease-in-out; */
+  transition: all 0.5s ease;
+}
+
+.tri-state-toggle-button.active {
+  background-color: hsl(176, 100%, 44%) !important;
+  border: 0px solid rgba(207, 207, 207, 0.6);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: 500;
+  transition: all 0.5s ease-in;
+}
+
+.tri-state-toggle-button:focus {
+  outline: none;
+}
+/* End toggle btn */
+.btn-container > input[value="RESET"] {
+  width: 45%;
+  background-color: hsl(281, 89%, 26%) !important;
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%) !important;
+}
+.btn-container > input[value="DEL"] {
+  background-color: hsl(281, 89%, 26%) !important;
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%) !important;
+}
+.btn-container > input[value="="] {
+  width: 45%;
+  color: black;
+  background-color: hsl(176, 100%, 44%) !important;
+  box-shadow: 0px 3px 0px hsl(177, 92%, 70%) !important;
+}
+.btn-container > input:hover {
+  background-color: hsl(268, 42%, 30%) !important;
+}
+.btn-container > input[value="="]:hover {
+  width: 45%;
+  color: black;
+  background-color: hsl(176, 100%, 39%) !important;
+  box-shadow: 0px 3px 0px hsl(177, 92%, 70%) !important;
+}
+.btn-container > input[value="DEL"]:hover {
+  background-color: hsl(281, 90%, 23%) !important;
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%) !important;
+}
+.btn-container > input[value="RESET"]:hover {
+  width: 45%;
+  background-color: hsl(281, 90%, 23%) !important;
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%) !important;
+}
